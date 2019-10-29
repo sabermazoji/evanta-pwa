@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(2, 2, 0),
         fontSize: 25,
         textAlign: 'center',
+        fontFamily: 'Vazir',
     },
     paper: {
         paddingBottom: 20,
