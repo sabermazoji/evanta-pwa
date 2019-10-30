@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: 20,
         paddingTop: 20,
     },
-    discreption:{
+    discreption: {
         textAlign: 'center',
         fontFamily: 'Vazir',
     },
