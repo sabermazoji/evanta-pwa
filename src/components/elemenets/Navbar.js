@@ -1,21 +1,10 @@
 import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import Fab from '@material-ui/core/Fab';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemAvatar from '@material-ui/core/ListItemAvatar';
-import ListItemText from '@material-ui/core/ListItemText';
-import ListSubheader from '@material-ui/core/ListSubheader';
-import Avatar from '@material-ui/core/Avatar';
-import MenuIcon from '@material-ui/icons/Menu';
-import AddIcon from '@material-ui/icons/Add';
-import SearchIcon from '@material-ui/icons/Search';
-import MoreIcon from '@material-ui/icons/MoreVert';
-
+import {
+ AppBar, Toolbar, Button, Fab,
+} from '@material-ui/core';
+import { GetAppRounded, Refresh } from '@material-ui/icons';
 
 // eslint-disable-next-line arrow-body-style
 const useStyles = makeStyles((theme) => ({
@@ -40,6 +29,27 @@ const useStyles = makeStyles((theme) => ({
         right: 0,
         margin: '0 auto',
     },
+    button: {
+        margin: theme.spacing(1, 10, 1, 0),
+        fontFamily: 'Vazir',
+        [theme.breakpoints.down('md')]: {
+            margin: theme.spacing(1, 5, 1, 0),
+        },
+    },
+    buttonApp: {
+        margin: theme.spacing(1, 0, 1, 10),
+        fontFamily: 'Vazir',
+        color: '#3f51b5',
+        backgroundColor: '#ffffff',
+        '&:hover': {
+            backgroundColor: '#ffffff',
+            color: '#c51162',
+        },
+        [theme.breakpoints.down('md')]: {
+            margin: theme.spacing(1, 0, 1, 5),
+        },
+    },
+
 }));
 
 const Navbar = () => {
@@ -50,19 +60,17 @@ const Navbar = () => {
 
             <AppBar position="fixed" color="primary" className={classes.appBar}>
                 <Toolbar>
-                    <IconButton edge="start" color="inherit" aria-label="open drawer">
-                        <MenuIcon />
-                    </IconButton>
+                    <Button variant="contained" color="secondary" className={classes.button}>
+                        درباره من
+                    </Button>
                     <Fab color="secondary" aria-label="add" className={classes.fabButton}>
-                        <AddIcon />
+                        <Refresh />
                     </Fab>
                     <div className={classes.grow} />
-                    <IconButton color="inherit">
-                        <SearchIcon />
-                    </IconButton>
-                    <IconButton edge="end" color="inherit">
-                        <MoreIcon />
-                    </IconButton>
+
+                    <Button startIcon={<GetAppRounded />} className={classes.buttonApp} variant="contained" color="default">
+                        نصب اپلیکیشن
+                    </Button>
                 </Toolbar>
             </AppBar>
         </>
