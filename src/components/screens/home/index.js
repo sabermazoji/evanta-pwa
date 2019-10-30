@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from '../../elemenets/Navbar';
 import Layout from '../../layouts';
 
 const Home = () => {

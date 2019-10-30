@@ -17,6 +17,10 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: 20,
         paddingTop: 20,
     },
+    discreption:{
+        textAlign: 'center',
+        fontFamily: 'Vazir',
+    },
 }));
 
 const Header = () => {
@@ -27,6 +31,10 @@ const Header = () => {
             <Paper square className={classes.paper}>
                 <Typography className={classes.text} variant="h1" gutterBottom>
                     دریافت رویداد روزانه
+                </Typography>
+
+                <Typography className={classes.discreption} component="p">
+                    دریافت رویداد های روزانه‌ی تقویم های هجری و شمسی و اطلاع از تعطیلی آن
                 </Typography>
             </Paper>
         </>
