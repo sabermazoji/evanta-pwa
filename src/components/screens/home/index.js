@@ -5,7 +5,7 @@ import Layout from '../../layouts';
 const Home = () => {
     return (
         <Layout>
-        <Navbar />
+        test
         </Layout>
     );
 };

@@ -2,11 +2,8 @@ import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
-import Paper from '@material-ui/core/Paper';
 import Fab from '@material-ui/core/Fab';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -22,16 +19,6 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 
 // eslint-disable-next-line arrow-body-style
 const useStyles = makeStyles((theme) => ({
-    text: {
-        padding: theme.spacing(2, 2, 0),
-        fontSize: 25,
-        textAlign: 'center',
-        fontFamily: 'Vazir',
-    },
-    paper: {
-        paddingBottom: 20,
-        paddingTop: 20,
-    },
     list: {
         marginBottom: theme.spacing(2),
     },
@@ -60,12 +47,7 @@ const Navbar = () => {
 
     return (
         <>
-            <CssBaseline />
-            <Paper square className={classes.paper}>
-                <Typography className={classes.text} variant="h1" gutterBottom>
-                    دریافت رویداد روزانه
-                </Typography>
-            </Paper>
+
             <AppBar position="fixed" color="primary" className={classes.appBar}>
                 <Toolbar>
                     <IconButton edge="start" color="inherit" aria-label="open drawer">
