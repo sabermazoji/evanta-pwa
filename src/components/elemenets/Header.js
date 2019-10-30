@@ -20,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
     discreption: {
         textAlign: 'center',
         fontFamily: 'Vazir',
+        [theme.breakpoints.down('md')]: {
+            fontSize: 13,
+        },
     },
 }));
 
